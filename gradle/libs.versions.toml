@@ -1,0 +1,30 @@
+[plugins]
+kotlin = { id = "org.jetbrains.kotlin.jvm", version = "1.9.0" }
+
+[versions]
+vertx = "4.4.4"
+coroutines = "1.7.3"
+
+[libraries]
+vertx-core = { module = "io.vertx:vertx-core", version.ref = "vertx" }
+vertx-web = { module = "io.vertx:vertx-web", version.ref = "vertx" }
+vertx-web-client = { module = "io.vertx:vertx-web-client", version.ref = "vertx" }
+vertx-lang-kotlin-coroutines = { module = "io.vertx:vertx-lang-kotlin-coroutines", version.ref = "vertx" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version = "1.4.4" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-slf4j = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j", version.ref = "coroutines" }
+
+[bundles]
+logging = [
+    "logback-classic",
+]
+coroutines = [
+    "kotlinx-coroutines-core",
+    "kotlinx-coroutines-slf4j",
+]
+vertx = [
+    "vertx-core",
+    "vertx-web",
+    "vertx-web-client",
+    "vertx-lang-kotlin-coroutines",
+]
